@@ -19,6 +19,7 @@ import { SlideshowModule } from 'ng-simple-slideshow'
 import { NgxSpinnerModule } from 'ngx-spinner'
 import { AppComponent } from './app.component'
 import { AboutComponent } from './about/about.component'
+import { ApikeyComponent } from './api-key/api-key.component'
 import { AdministrationComponent } from './administration/administration.component'
 import { BasketComponent } from './basket/basket.component'
 import { LoginComponent } from './login/login.component'
@@ -140,6 +141,7 @@ export function HttpLoaderFactory (http: HttpClient) {
   declarations: [
     AppComponent,
     AboutComponent,
+    ApikeyComponent,
     AdministrationComponent,
     BasketComponent,
     LoginComponent,

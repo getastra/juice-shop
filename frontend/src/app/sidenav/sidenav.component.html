@@ -214,6 +214,14 @@
       {{"TITLE_ABOUT" | translate}}
     </span>
   </a>
+  <a mat-list-item routerLink="/api-key" (click)="onToggleSidenav()" aria-label="Go to api key leaks page">
+    <i class="material-icons">
+      lock_outline
+    </i>
+    <span class="menu-text truncate">
+      {{"TITLE_API" | translate}}
+    </span>
+  </a>
   <a mat-list-item routerLink="/photo-wall" (click)="onToggleSidenav()" aria-label="Go to photo wall">
     <i class="material-icons">
       camera

@@ -1,0 +1,187 @@
+<!--
+  ~ Copyright (c) 2014-2021 Bjoern Kimminich.
+  ~ SPDX-License-Identifier: MIT
+  -->
+  <div fxLayoutAlign="center">
+    <mat-card class="mat-elevation-z6">
+      <section class="api">
+        <h1 translate>API Key Examples</h1>
+        <h2 translate>Introduction</h2>
+        <p class="text-justify">
+  
+          This page provides real-world examples of credentials and api keys that are prone to being accidentally leaked by 
+          developers. The algorithm detects private keys, OAuth tokens and numerous other credentials that use deterministic
+          string formats.
+        </p>
+        <div>
+            <h2>Twilio</h2>
+            <p>
+                Twilio is another API that's in wide use. It offers the use of API Key and SID key to access it's services.
+            </p>
+            <h3>Twilio API Key</h3>
+            <div>
+                <pre><code>TWILIO_API_KEY = SK2a0747eba6abf96b7e3c3ff0b4530f6e</code></pre>
+            </div>
+            <h3>Twilio SID Key</h3>
+            <div>
+                <pre><code>TWILIO_SID_KEY = ACdbc12abd239bde2cfeDA32CdAe2DecBD</code></pre>
+            </div>
+        </div>
+        <div>
+            <h2>Mailgun</h2>
+            <p>
+                Mailgun API allows you to send emails and perform other actions linked to your Mailgun account programmatically. 
+                The API key has full control over your account.
+            </p>
+            <h3>Mailgun API Key</h3>
+            <div>
+            <pre><code>MAILGUN_API_KEY = "key-eg8f02fb71f9ee886e96588013241ca0"</code></pre>
+            </div>
+        </div>
+        <div>
+            <h2>Mailchimp</h2>
+            <p>
+                Mailchimp is an email marketing service. It supports an API to integrate any application with the emailing services.
+            </p>
+            <h3>Mailchimp API Key</h3>
+            <div>
+                <pre><code>MAILCHIMP_API_KEY = "a2937653ed38c31a43ea46e2b19257db-us2"</code></pre>
+            </div>
+        </div>
+        <div>
+            <h2>Heroku</h2>
+            <p>
+                Heroku is a cloud provider, the platform key allow developers to authenticate on Heroku Platform in scripts and 
+                applications.
+            </p>
+            <h3>Heroku API Key</h3>
+            <div>
+                <pre><code>HEROKU_AUTH = 318b60bc-221b-4549-938e-542cb9d7757a</code></pre>
+            </div>
+        </div>
+        <div>
+            <h2>Square Space</h2>
+            <p>
+                Square APIs enable to accept payments securely and to integrate applications with the solution.
+            </p>
+            <h3>Square Access Token</h3>
+            <div>
+                <pre><code>SQUARE_ACCESS_TOKEN = "sq0atp-ZHE5_L-3DJZ9Ti7iDEADBEEF"</code></pre>
+            </div>
+            <h3>Square OAuth Secret</h3>
+            <div>
+                <pre><code>SQUARE_OAUTH_SECRET = "sq0csp-mE0eOD3rS7WsHFXSu2gU9DPumSr2r1AImSdjIkuyza8"</code></pre>
+            </div>
+        </div>
+        <div>
+            <h2>Stripe</h2>
+            <p>
+                Stripe is often cited as the reference standard API for its structure and documentation. Given its wide use, 
+                there's an elevated likelihood that Stripe API keys are already embedded in your source deck or supporting files.
+            </p>
+            <h3>Stripe API Key</h3>
+            <div>
+                <pre><code>STRIPE_API_KEY = "sk_live_ReTllpYQYfIZu2Jnf2lAPFjD"</code></pre>
+                <pre><code>stripe_creds = "rk_live_5TcWfjKmJgpql9hjpRnwRXbT"</code></pre>
+            </div>
+        </div>
+        <div>
+            <h2>Facebook</h2>
+            <p>
+                User access tokens are generally obtained via a login dialog and require a person to authorize the app to obtain one.
+                Access tokens are used to read, modify, or write a specific person's Facebook data on their behalf.
+            </p>
+            <h3>Facebook Acess Token</h3>
+            <div>
+                <pre><code>FACEBOOK_ACCESS_TOKEN = "EAACEdEose0cBANTYM3rlcZAFmfpoXBtde2qTs8RlXlu18JoLANzBZBAr1kRiBhS4ukg9sPAdZAIQgZCzGaOAA3fKrcZBvpdFihFZAqOdpCDGEGkyIoXOKxn3lZBFbUk6TKDKZCPemqjsu2HpIEUSsiRGZCSAeWzwsdAsC46nsxZALItwZDZD"</code></pre>
+            </div>
+        </div>
+        <div>
+            <h2>Amazon</h2>
+            <p>
+                Amazon Marketplace Web Service API allows developers to create applications for Amazon sellers.
+            </p>
+            <h3>Amazon MWS Auth Token</h3>
+            <div>
+                <pre><code>MWSAUTHTOKEN = "amzn.mws.48b3d760-b504-e217-3b5d-82fe23080eb5"</code></pre>
+            </div>
+        </div>
+        <div>
+            <h2>Send Grid</h2>
+            <h3>SendGrid API Key</h3>
+            <p>
+                SendGrid is a communication platform for transactional and marketing emails. It offers a REST API to programmatically 
+                send emails and perform all sort of actions with a SendGrid account. Leaking a SendGrid API key can result 
+                in malicious individuals sending emails in the name of the concerned organization.
+            </p>
+            <div>
+                <pre><code>apikey = "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"</code></pre>
+            </div>
+        </div>
+        <div>
+            <h2>Slack</h2>
+            <h3>Slack API Key</h3>
+            <p> 
+                Users can create Slack applications to automate some actions in workspaces. Slack allows these applications to act 
+                directly on behalf of users in the communication channels by providing the applications with a user token after an 
+                OAuth2 authorization flow.
+            </p>
+            <div>
+                <pre><code>apikey = "xoxp-41684372915-1320496754-45609968301-e708ba56e1517a99f6b5fb07349476ef"</code></pre>
+            </div>
+        </div>
+        <div>
+            <h2>Paypal / Braintree</h2>
+            <p>
+                Paypal is a worldwide payment system that supports online money transfers. It operates as a payment processor for 
+                many online vendors or auction platforms among others. The credentials can be used to get an access token for 
+                further REST API calls with authentication.
+            </p>
+            <h3>Paypal / Braintree Access Token</h3>
+            <div>
+                <pre><code>PAYPAL_BRAINTREE_ACCESS_TOKEN = "access_token$production$696htvk3y5xcfnsn$42cde001d7a240d98ded578b4c1321c9"</code></pre>
+            </div>
+        </div>
+        <div>
+            <h2>Google</h2>
+            <h3>Google OAuth Key</h3>
+            <p>
+                Oauth2 keys allow to build applications that can access information from a Google account.
+            </p>
+            <div>
+                <pre><code>client_id = "332292536747-qbemitq8128k6gv5r3ddlame0jmadcnm.apps.googleusercontent.com"</code></pre>
+            </div>
+        </div>
+        <div>
+            <h2>Asymmetric Key</h2>
+            <h3>Asymmetric Private Key</h3>
+            <div>
+                <pre><code>-----BEGIN PRIVATE KEY-----MIIDAOIZJDOIaozijdoiajzdj876DAOIZJDOIaozijdoiajzdj876DAOIZJDOIaozijdoiajzdj876DAOIZJDOIaozijdoiajzdj876DAOIZJDOIaozijdoiajzdj876-----END PRIVATE KEY-----</code></pre>
+            </div>
+        </div>
+        <div></div>
+        <div>
+            <h2>Github</h2>
+            <p>
+                Github's OAuth Token can be used to view repositories, download them, check private repositories, even DELETE 
+                repositories.
+            </p>
+            <h3>Github OAuth Token</h3>
+            <pre><code>access_token=gho_16C7e42F292c6912E7710c838347Ae178B4a&token_type=bearer</code></pre>
+        </div>
+        <div>
+          <h2>Amazon Web Services (AWS)</h2>
+          <p>
+            There's no more widely used platform other than AWS and you can't risk exposing access information and publishing
+            it on your website's source code. There are many instances of using the access keys for various purposes and 
+            hard-coded in source code for testing.
+          </p>
+          <h3>AWS Key</h3>
+          <div>
+            <pre><code>const AWSKEY = "AKIALALEMEL33243OLIB"</code></pre>
+          </div>
+        </div>
+      </section>
+    </mat-card>
+  </div>
+  
