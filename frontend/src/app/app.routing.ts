@@ -10,6 +10,7 @@ import { TrackResultComponent } from './track-result/track-result.component'
 import { ContactComponent } from './contact/contact.component'
 import { AboutComponent } from './about/about.component'
 import { ApikeyComponent } from './api-key/api-key.component'
+import { ThirdPartyComponent } from './third-party-domain/third-party-domain.component'
 import { RegisterComponent } from './register/register.component'
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component'
 import { SearchResultComponent } from './search-result/search-result.component'
@@ -62,6 +63,10 @@ const routes: Routes = [
   {
     path: 'api-key',
     component: ApikeyComponent
+  },
+  {
+    path: 'third-party-domain',
+    component: ThirdPartyComponent
   },
   {
     path: 'address/select',
