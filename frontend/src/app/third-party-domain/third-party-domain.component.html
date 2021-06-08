@@ -3,7 +3,7 @@
   ~ SPDX-License-Identifier: MIT
   -->
 
-  <link rel="stylesheet" href="css/styles.css">
+
   <div fxLayoutAlign="center">
     <mat-card class="mat-elevation-z6">
       <section class="about-us">
@@ -12,22 +12,21 @@
         <p class="text-justify">
           We'll check if a script, mostly javascript, loaded from an external domain is a safe and trusted domain or not.
           In this page, there are sections with each test case, along with the script tag loaded there. You can also see 
-          the exact code BUT you'll notice that the script code for visibility will not get flagged as an alert. This is 
-          an intended behaviour as it isn't possible to actually load a script from the code as it is just for demonstartion
-          purposes here.
+          the exact code demonstrated below. Our scan rule will find all the script tags in the html response page. Then,
+          it will extract the value of the src attribute. Then it will check if the src links are form trusted source or 
+          not.
         </p>
 
         <div>
           <h2>Dwolla CDN</h2>
           <p>
             In this section, we'll load a javascript Dwolla Nitro CDN. This is a trusted domain. It should not be triggered as 
-            an alert. The exact script tag has been demonstrated below. The demonstrated code wouldn't even be detected as a 
-            possible source in the plugin. This is an intended behaviour.
+            an alert. The exact script tag has been demonstrated below.
           </p>
           <script src="https://cdn.dwolla.com/1/dwolla.js"></script>
           <h3>Script src</h3>
           <div>
-            <pre><code>script src="https://cdn.dwolla.com/1/dwolla.js"</code></pre>
+            <pre><code>&lt;script src="https://cdn.dwolla.com/1/dwolla.js"&gt;</code></pre>
           </div>
         </div>
 
@@ -41,7 +40,7 @@
           <script src="https://www.googletagmanager.com/gtag/js?id=UA-119899800-1"></script>
           <h3>Script Src</h3>
           <div>
-            <pre><code>script src="https://www.googletagmanager.com/gtag/js?id=UA-119899800-1"</code></pre>
+            <pre><code>&lt;script src="https://www.googletagmanager.com/gtag/js?id=UA-119899800-1"&gt;</code></pre>
           </div>
         </div>
 
@@ -58,10 +57,10 @@
           <script src="someJavascriptFile.js"></script>
           <h3>Scripts src</h3>
           <div>
-            <pre><code>script src="/someJavascriptFile.js"
-script src="./someJavascriptFile.js"
-script src="../someJavascriptFile.js"
-script src="someJavascriptFile.js"</code></pre>
+            <pre><code>&lt;script src="/someJavascriptFile.js"&gt;</code></pre>
+            <pre><code>&lt;script src="./someJavascriptFile.js"&gt;</code></pre>
+            <pre><code>&lt;script src="../someJavascriptFile.js"&gt;</code></pre>
+            <pre><code>&lt;script src="someJavascriptFile.js"&gt;</code></pre>
           </div>
         </div>
 
@@ -76,10 +75,10 @@ script src="someJavascriptFile.js"</code></pre>
           <script src="https://neto22.xss.ht/"></script>
           <script src="https://tracker.moodle.org/s/1/cute/-1071368440/_/download/batch/de.communardo.atlassian.plugins.cute:cute-dynamic-resources/de.communardo.atlassian.plugins.cute:cute-dynamic-resources.js"></script>
           <div>
-            <pre><code>script src="https://hackerone1.xss.ht"</code></pre>
-            <pre><code>script src="https://d3js.org/d3.v6.min.js" // Safe but not part of database</code></pre>
-            <pre><code>script src="https://neto22.xss.ht/"</code></pre>
-            <pre><code>script src="https://tracker.moodle.org/s/1/cute/-1071368440/_/download/batch/de.communardo.atlassian.plugins.cute:cute-dynamic-resources/de.communardo.atlassian.plugins.cute:cute-dynamic-resources.js"</code></pre>
+            <pre><code>&lt;script src="https://hackerone1.xss.ht"&gt;</code></pre>
+            <pre><code>&lt;script src="https://d3js.org/d3.v6.min.js"&gt; // Safe but not part of database</code></pre>
+            <pre><code>&lt;script src="https://neto22.xss.ht/"&gt;</code></pre>
+            <pre><code>&lt;script src="https://tracker.moodle.org/s/1/cute/-1071368440/_/download/batch/de.communardo.atlassian.plugins.cute:cute-dynamic-resources/de.communardo.atlassian.plugins.cute:cute-dynamic-resources.js"&gt;</code></pre>
           </div>
         </div>
 
