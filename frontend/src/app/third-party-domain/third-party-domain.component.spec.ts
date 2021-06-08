@@ -34,7 +34,7 @@ describe('ThirdPartyComponent', () => {
   }))
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(TokenSaleComponent)
+    fixture = TestBed.createComponent(ThirdPartyComponent)
     component = fixture.componentInstance
     fixture.detectChanges()
   })
