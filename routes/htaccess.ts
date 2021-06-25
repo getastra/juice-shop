@@ -6,7 +6,6 @@ exports.serve = () => {
             if (err != null) {
               next(new Error(`Unable to retrieve htaccess file: ${err.message}`))
             }
-            var fileSize = content.size
             res.status(200).end(content)
           })
     }
