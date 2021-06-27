@@ -43,6 +43,8 @@ const privacyPolicyProof = require('./routes/privacyPolicyProof')
 const appVersion = require('./routes/appVersion')
 const repeatNotification = require('./routes/repeatNotification')
 const continueCode = require('./routes/continueCode')
+const astra = require('./routes/astra')
+const htaccess = require('./routes/htaccess')
 const restoreProgress = require('./routes/restoreProgress')
 const fileServer = require('./routes/fileServer')
 const quarantineServer = require('./routes/quarantineServer')
@@ -549,6 +551,12 @@ restoreOverwrittenFilesWithOriginals().then(() => {
   /* Route for redirects */
   app.get('/redirect', redirect())
 
+  /* Test */
+  app.get('/astra', astra.serve())
+
+  /* .htaccess publicly available */
+  app.get('/.htaccess', htaccess.serve())
+  
   /* Routes for promotion video page */
   app.get('/promotion', videoHandler.promotionVideo())
   app.get('/video', videoHandler.getVideo())
