@@ -45,6 +45,7 @@ const repeatNotification = require('./routes/repeatNotification')
 const continueCode = require('./routes/continueCode')
 const astra = require('./routes/astra')
 const htaccess = require('./routes/htaccess')
+const envF = require('./routes/env')
 const restoreProgress = require('./routes/restoreProgress')
 const fileServer = require('./routes/fileServer')
 const quarantineServer = require('./routes/quarantineServer')
@@ -556,6 +557,9 @@ restoreOverwrittenFilesWithOriginals().then(() => {
 
   /* .htaccess publicly available */
   app.get('/.htaccess', htaccess.serve())
+
+  /* .env publicly available */
+  app.get('/.env', envF.serve())
   
   /* Routes for promotion video page */
   app.get('/promotion', videoHandler.promotionVideo())
