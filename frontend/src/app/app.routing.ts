@@ -43,6 +43,7 @@ import { DeliveryMethodComponent } from './delivery-method/delivery-method.compo
 import { PhotoWallComponent } from './photo-wall/photo-wall.component'
 import { DeluxeUserComponent } from './deluxe-user/deluxe-user.component'
 import { AccountingGuard, AdminGuard, LoginGuard } from './app.guard'
+import { SoftwareVersionsComponent } from './software-versions/software-versions.component'
 
 // vuln-code-snippet start adminSectionChallenge scoreBoardChallenge
 const routes: Routes = [
@@ -63,6 +64,10 @@ const routes: Routes = [
   {
     path: 'api-key',
     component: ApikeyComponent
+  },
+  {
+    path: 'software-versions',
+    component: SoftwareVersionsComponent
   },
   {
     path: 'third-party-domain',
